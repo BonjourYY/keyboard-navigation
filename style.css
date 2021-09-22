@@ -1,0 +1,35 @@
+/* 居中显示 */
+main > #warpper{
+    display: inline-block; 
+}
+main{
+    text-align: center;
+}
+
+#wrapper > div{
+    margin: 2em 0 2em 0;
+}
+
+#wrapper kbd{
+    font-size: 20px;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    border: 1px solid #DDD;
+    color: rgba(175, 57, 57, 1);
+    position: relative;
+    text-transform: uppercase;
+}
+
+#wrapper kbd > button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+#wrapper kbd:hover > button{
+    display: inline-block;
+}
+
