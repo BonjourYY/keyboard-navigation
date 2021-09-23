@@ -1,35 +1,68 @@
-/* 居中显示 */
-main > #warpper{
-    display: inline-block; 
-}
-main{
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-#wrapper > div{
-    margin: 2em 0 2em 0;
+main {
+ text-align: center;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #292929;
+ background-image: url(./bg.png);
+ background-size: 100% 100%;
 }
 
-#wrapper kbd{
-    font-size: 20px;
-    display: inline-block;
-    width: 4em;
-    height: 4em;
-    line-height: 4em;
-    border: 1px solid #DDD;
-    color: rgba(175, 57, 57, 1);
-    position: relative;
-    text-transform: uppercase;
+#wrapper > .row {
+ margin: 2em 0 2em 0;
 }
 
-#wrapper kbd > button{
+#wrapper > .row1 {
+ margin-left: -20px;
+}
+
+#wrapper > .row2 {
+ margin-left: -117px;
+}
+
+#wrapper kbd {
+ /* width: 4em;
+ height: 4em; */
+ /* line-height: 4em; */
+ position: relative;
+ text-transform: uppercase;
+ width: 50px;
+ height: 40px;
+ background: linear-gradient(to bottom right, #292929 0%, #111111 100%);
+ border: 1px solid #373737;
+ font-size: 20px;
+ color: #c5c5c5;
+ border-radius: 7px;
+ box-shadow: 0px 0px 0px 1px #1a1b1c, 0px 0px 0px 2px #1f2020,
+  0px 2px 0px 2px #080808;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0px 10px;
+}
+
+
+kbd img{
+    width: 16px;
+    height: 16px;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    display: none;
+    right: 0px;
+    bottom:0px;
 }
 
-#wrapper kbd:hover > button{
-    display: inline-block;
+#wrapper kbd > button {
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ display: none;
 }
 
+#wrapper kbd:hover > button {
+ display: inline-block;
+}

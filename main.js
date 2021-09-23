@@ -26,22 +26,33 @@ if(newHash){
 var index1 = 0;
 while (index1 < data.length) {
     var div = document.createElement("div");
+    var className1 = "row";
+    var className2 = "row" + [index1];
+    div.classList.add(className1,className2);
     wrapper.appendChild(div);
     // 创建 kbd
     var index2 = 0;
     while (index2 < data[index1].length) {
         var kbd = document.createElement("kbd");
         var span = document.createElement("span");
-        span.textContent = data[index1][index2];
         var button = document.createElement("button");
+        var img = document.createElement("img")
+        kbd.className = "key";
+        span.classList.add("text")
+        span.textContent = data[index1][index2];
         button.textContent = "编辑";
         button.id = data[index1][index2];
+        img.src = hash[data[index1][index2]] + "/favicon.ico"
         kbd.appendChild(span);
         kbd.appendChild(button);
+        kbd.appendChild(img);
         // 监听button事件
         button.onclick = function (e) {
             var newWebsite = prompt("请给我一个网址")
+            console.log(e);
             hash[e["target"]["id"]] = newWebsite; // hash 变更
+            var img2 = e["target"].nextSibling; //获取 img 元素
+            img2.src = hash[e["target"]["id"]] + "/favicon.ico"
             // 存放到localstorage
             localStorage.setItem("zzz",JSON.stringify(hash));
         }
