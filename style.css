@@ -18,11 +18,11 @@ main {
  margin: 2em 0 2em 0;
 }
 
-#wrapper > .row1 {
+#wrapper > :nth-child(2) {
  margin-left: -20px;
 }
 
-#wrapper > .row2 {
+#wrapper > :nth-child(3) {
  margin-left: -117px;
 }
 
